@@ -10,11 +10,56 @@
 }
 
 @font-face {
-    font-family: "Poppins";
-    src: url("/assets/fonts/Poppins-Bold.ttf");
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Bold.ttf");
 }
 
-body{
-    background-color: var(--neutral-gray-main);
-    font-family: "Poppins";
+body {
+  background-color: var(--neutral-gray-main);
+  font-family: "Poppins";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-container {
+  background-color: var(--neutral-white);
+  padding: 4rem;
+  border-radius: 20px 20px 120px;
+  width: 55rem;
+}
+
+.inputs-labels-section {
+  display: flex;
+}
+
+.inputs-labels-section label {
+  display: block;
+  color: var(--neutral-gray-thirt);
+  margin-bottom: 5px;
+}
+
+.inputs-labels-section input {
+  border: 2px solid var(--neutral-gray-sec);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 32px;
+  width: 50%;
+}
+
+hr {
+  background-color: var(--neutral-gray-sec);
+  height: 1.5px;
+  border: none;
+  flex-grow: 1;
+  align-self: center;
+}
+
+.icon-arrow-box {
+  background-color: var(--primary-purple);
+  width: fit-content;
+  padding: 20px;
+  border-radius: 50%;
+  cursor: pointer;
 }

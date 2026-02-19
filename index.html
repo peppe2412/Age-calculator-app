@@ -1,36 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Age calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
 
-  Day
-  DD
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main-container">
+      <section class="inputs-labels-section">
+        <div style="width: 17rem">
+          <label for="day">DAY</label>
+          <input type="text" />
+        </div>
+        <div style="width: 17rem">
+          <label for="month">MONTH</label>
+          <input type="text" />
+        </div>
+        <div style="width: 17rem">
+          <label for="year">YEAR</label>
+          <input type="text" />
+        </div>
+      </section>
+      <section style="margin-top: 30px">
+        <div style="display: flex;">
+          <hr>
+          <div class="icon-arrow-box">
+            <object
+              data="/assets/images/icon-arrow.svg"
+              type="image/svg+xml"
+              title="Arrow icon"
+            >
+              Arrow icon
+            </object>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-
-  <script src="main.js"></script>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
