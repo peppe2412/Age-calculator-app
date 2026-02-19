@@ -30,26 +30,26 @@
   <body>
     <main class="main-container">
       <section class="inputs-labels-section">
-        <div style="width: 17rem">
+        <div class="labels-inputs-box">
           <label for="day">DAY</label>
-          <input type="text" />
-          <small>Ciao</small>
+          <input name="day-input" type="text" />
+          <small class="alert-error display-none"></small>
         </div>
-        <div style="width: 17rem">
+        <div class="labels-inputs-box">
           <label for="month">MONTH</label>
-          <input type="text" />
-          <small>Ciao</small>
+          <input name="month-input" type="text" />
+          <small class="alert-error display-none"></small>
         </div>
-        <div style="width: 17rem">
+        <div class="labels-inputs-box">
           <label for="year">YEAR</label>
-          <input type="text" />
-          <small>Ciao</small>
+          <input name="year-input" type="text" />
+          <small class="alert-error display-none"></small>
         </div>
       </section>
       <section style="margin-top: 30px">
         <div style="display: flex">
           <hr />
-          <div class="icon-arrow-box">
+          <button id="submit-results">
             <object
               data="/assets/images/icon-arrow.svg"
               type="image/svg+xml"
@@ -57,7 +57,7 @@
             >
               Arrow icon
             </object>
-          </div>
+          </button>
         </div>
       </section>
       <section class="results-section">
