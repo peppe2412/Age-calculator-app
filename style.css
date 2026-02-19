@@ -1,0 +1,20 @@
+/* root colors */
+:root {
+  --primary-purple: hsl(259, 100%, 65%);
+  --primary-red: hsl(0, 100%, 67%);
+  --neutral-white: hsl(0, 100%, 100%);
+  --neutral-gray-main: hsl(0, 0%, 94%);
+  --neutral-gray-sec: hsl(0, 0%, 86%);
+  --neutral-gray-thirt: hsl(0, 1%, 44%);
+  --neutral-black: hsl(0, 0%, 0%);
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("/assets/fonts/Poppins-Bold.ttf");
+}
+
+body{
+    background-color: var(--neutral-gray-main);
+    font-family: "Poppins";
+}
