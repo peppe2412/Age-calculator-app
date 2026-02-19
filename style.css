@@ -69,6 +69,10 @@ body {
   display: block;
 }
 
+.inputs-labels-section input:focus{
+  outline: 2px solid var(--primary-purple);
+}
+
 .inputs-labels-section small {
   font-family: "Poppins-italic";
 }
