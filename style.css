@@ -36,10 +36,20 @@ body {
   background-color: var(--neutral-gray-main);
   font-family: "Poppins";
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+}
+
+header {
+  padding: 5rem 0 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
 }
 
 .display-none {
@@ -156,6 +166,15 @@ hr {
     height: 100vh;
   }
 
+  header{
+    padding: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  h1{
+    font-size: x-large;
+  }
+
   .main-container {
     width: 100%;
     max-width: 22rem;
@@ -167,7 +186,7 @@ hr {
     width: 100%;
   }
 
-  .inputs-labels-section{
+  .inputs-labels-section {
     margin-bottom: 6rem;
   }
 
