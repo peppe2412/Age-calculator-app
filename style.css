@@ -36,10 +36,20 @@ body {
   background-color: var(--neutral-gray-main);
   font-family: "Poppins";
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+}
+
+header {
+  padding: 5rem 0 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
 }
 
 .display-none {
@@ -167,7 +177,7 @@ hr {
     width: 100%;
   }
 
-  .inputs-labels-section{
+  .inputs-labels-section {
     margin-bottom: 6rem;
   }
 
