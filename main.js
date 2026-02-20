@@ -1,7 +1,14 @@
 const input = document.querySelectorAll("input");
 const submitResults = document.querySelector("#submit-results");
 const alertsError = document.querySelectorAll(".alert-error");
+const linesInitial = document.querySelectorAll(".line-initial");
+const yearResult = document.querySelector("#year-result");
+const monthResult = document.querySelector("#month-result");
+const dayResult = document.querySelector("#day-result");
 
+const today = new Date();
+const day = new Date().getDate();
+const month = new Date().getMonth() + 1;
 const year = new Date().getFullYear();
 
 submitResults.addEventListener("click", () => {
@@ -9,7 +16,56 @@ submitResults.addEventListener("click", () => {
     clearAlertError(input, index);
     checkIfError(input, index);
   });
+  calculate();
 });
+
+input.forEach((singleInput) => {
+  singleInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      input.forEach((input, index) => {
+        clearAlertError(input, index);
+        checkIfError(input, index);
+      });
+      calculate();
+    }
+  });
+});
+
+function calculate() {
+  const dayValue = parseInt(input[0].value);
+  const monthValue = parseInt(input[1].value);
+  const yearValue = parseInt(input[2].value);
+
+  const hasError = [...alertsError].some((alert) => {
+    return !alert.classList.contains("display-none");
+  });
+
+  if (hasError || isNaN(dayValue) || isNaN(monthValue) || isNaN(yearValue))
+    return;
+
+  let dayInsert = day - dayValue;
+  let monthInsert = month - monthValue;
+  let yearInsert = year - yearValue;
+
+  if (dayInsert < 0) {
+    monthInsert--;
+    const monthBefore = new Date(today.getFullYear(), today.getMonth(), 0);
+    dayInsert += monthBefore.getDate();
+  }
+
+  if (monthInsert < 0) {
+    yearInsert--;
+    monthInsert += 12;
+  }
+
+  linesInitial.forEach((line) => {
+    line.classList.add("display-none");
+  });
+
+  yearResult.textContent = yearInsert;
+  monthResult.textContent = monthInsert;
+  dayResult.textContent = dayInsert;
+}
 
 function checkIfError(input, index) {
   if (input.value.trim() === "") {
