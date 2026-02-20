@@ -11,25 +11,25 @@
 
 @font-face {
   font-family: "Poppins";
-  src: url("/assets/fonts/Poppins-Bold.ttf");
+  src: url("assets/fonts/Poppins-Bold.ttf") format("truetype");
 }
 
 /* font italic */
 @font-face {
   font-family: "Poppins-italic";
-  src: url("/assets/fonts/Poppins-Italic.ttf");
+  src: url("assets/fonts/Poppins-Italic.ttf") format("truetype");
 }
 
 /* font extra bold */
 @font-face {
   font-family: "Poppins-extrabold";
-  src: url("assets/fonts/Poppins-ExtraBold.ttf");
+  src: url("assets/fonts/Poppins-ExtraBold.ttf") format("truetype");
 }
 
 /* font extra bold italic */
 @font-face {
   font-family: "Poppins-extrabold-italic";
-  src: url("/assets/fonts/Poppins-ExtraBoldItalic.ttf");
+  src: url("assets/fonts/Poppins-ExtraBoldItalic.ttf") format("truetype");
 }
 
 body {
