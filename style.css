@@ -59,6 +59,7 @@ body {
   border: 1px solid var(--primary-red);
 }
 
+/* CSS MAIN */
 .main-container {
   background-color: var(--neutral-white);
   padding: 4rem;
@@ -71,7 +72,8 @@ body {
 }
 
 .labels-inputs-box {
-  width: 17rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .inputs-labels-section label {
@@ -145,4 +147,62 @@ hr {
   flex: 0 1 40px;
   margin: 0;
   transform: skewX(-15deg);
+}
+
+/* CSS MOBILE */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+    height: 100vh;
+  }
+
+  .main-container {
+    width: 100%;
+    max-width: 22rem;
+    padding: 2rem 1.5rem;
+    border-bottom-right-radius: 7rem;
+  }
+
+  .labels-inputs-box {
+    width: 100%;
+  }
+
+  .inputs-labels-section{
+    margin-bottom: 6rem;
+  }
+
+  .inputs-labels-section input {
+    width: 50%;
+    padding: 1rem;
+    font-size: large;
+  }
+
+  hr {
+    position: relative;
+    z-index: 1;
+  }
+
+  #submit-results {
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+  .results-section {
+    font-size: x-large;
+    margin-top: 4rem;
+  }
+
+  .results-box {
+    gap: 1rem;
+    position: relative;
+  }
+
+  .line-initial {
+    height: 0.625rem;
+    flex: 0 1 1.5rem;
+  }
 }
